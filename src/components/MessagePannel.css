@@ -1,0 +1,213 @@
+#sidenav{
+    width: 220px;
+    height: 100vh;
+    position: absolute;
+    box-shadow: 0 0 5px 0 rgb(37, 36, 36);
+    padding: 30px;
+    background-color: white;
+    z-index: 3;
+}
+#sidenav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#sidenav ul li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+}
+#sidenav ul li span{
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 1px;
+    padding-bottom: 2px;
+}
+#hambar2{
+    width: 200px;
+    margin-left: -5px;
+}
+#hambar2 svg{
+    height: 25px!important;
+    width: 25px!important;
+}
+nav{
+    position: absolute;
+    padding: 0 220px;
+    height: 10vh;
+    background-color: white;
+    box-shadow: 0 0 5px 0 rgb(37, 36, 36);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+nav .profile{
+    position: absolute;
+    right: 50px;
+    height: 35px;
+    width: 35px;
+    background-color: rgb(0, 0, 0, .8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .profile i{
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+nav input{
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    font-size: 18px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+nav .search svg{
+    background-color: white;
+    height: 43px;
+    width: 45px;
+    position: absolute;
+    padding: 0 10px;
+    /* padding-top: 10px; */
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-radius: 0 10px 10px 0;
+}
+#mainMsgC{
+    position: relative;
+    padding-top: 10vh;
+    padding-left: 220px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mainMsgC .msgcontent{
+    height: 90%;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 rgb(37, 36, 36);
+    padding: 15px 25px;
+}
+
+
+#mainMsgC .msgcontent .header ul{
+    margin: 10px;
+    margin-top: 20px;
+    list-style: none;
+    justify-content: space-around;
+    display: flex;
+    font-size: 17px;
+    font-weight: 600;
+}
+#mainMsgC .msgcontent .header ul li{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+#mainMsgC .msgcontent .header ul li span{
+    padding-bottom: 2px;
+}
+
+.border{
+    border-bottom: 1px solid rgb(0, 0, 0, .5);
+    margin: 0 50px;
+    margin-bottom: 20px;
+}
+.checked{
+    color: blue;
+}
+#topmsg{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.code{
+    display: flex;
+    justify-content: end;
+    margin-right: 50px;
+    font-size: 17px;
+    color: rgb(38, 38, 255);
+}
+.inpflds{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 50px;
+    position: relative;
+}
+.inpflds textarea{
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    resize: none;
+}
+.inpflds #phnumber{
+    height: 110px;
+}
+.inpflds label{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+.buttons{
+    display: flex;
+    justify-content: end;
+    margin: 20px 70px;
+    gap: 30px;
+}
+.buttons button{
+    width: 130px;
+    border: none;
+    height: 28px;
+    border-radius: 5px;
+    padding-top: 2px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.buttons .send{
+    background-color: blue;
+    color: white;
+}
+.buttons .schedule{
+    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.buttons .schedule svg{
+    padding-bottom: 2px;
+}
+.charactercounter{
+    position: absolute;
+    bottom: 5px;
+    font-size: 15px;
+    color: blue;
+    right: 5px;
+}
+svg{
+    height: 20px;
+    width: 20px;
+}

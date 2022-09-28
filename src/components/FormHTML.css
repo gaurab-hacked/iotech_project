@@ -1,0 +1,107 @@
+#FormTemplate{
+    height: 100vh;
+    width: 100%;
+    background-color: #FCFCFC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#FormTemplate .form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    align-items: center;
+    height: 540px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 0 rgb(0, 0, 0,.6);
+}
+#FormTemplate .form #logo{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+
+}
+#FormTemplate .form img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+#FormTemplate .form #logo p{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: -20px;
+}
+
+#FormTemplate form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 15px;
+    padding: 30px;
+}
+#FormTemplate form input{
+    border: 1px solid black;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 17px;
+}
+
+
+.field-group{
+    /* width: 600px; */
+    position: relative;
+    padding-top: 15px;
+}
+.input-field{
+    width: 100%;
+    outline: 0;
+    border: 1px solid #000000!important;
+    font-size: 1em;
+    color: black;
+    border-radius: 3px;
+}
+.input-label{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    padding: 5px;
+    background-color: #FCFCFC;
+    font-size: 14px;
+    color: #000000;
+}
+.form form a{
+    text-decoration: none;
+    color: rgb(44, 43, 43);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 5px;
+}
+.form form p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.form form i{
+    font-size: 12px;
+}
+.form form span{
+    font-size: 14px;
+    font-weight: 600;
+}
+.form form button{
+    width: 100px;
+    padding: 7px 10px;
+    margin:30px auto;
+    background-color: #005654;
+    background-image: linear-gradient(#005654, rgb(119, 111, 111));
+    color: white;
+    border: none;
+    font-size: 17px;    
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
