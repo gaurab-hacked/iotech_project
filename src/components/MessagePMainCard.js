@@ -4,7 +4,7 @@ const MessagePMainCard = (props) => {
   const { MessageForm } = props;
 
   const [msgFld, setMsgFld] = useState({ phnumber: "", message: "" });
-  const [letter, setLetter] = useState();
+  const [letter, setLetter] = useState(0);
   // const [phnumber, setPhnumber] = useState([]);
 
   const inpfldChange = (e) => {
@@ -13,7 +13,7 @@ const MessagePMainCard = (props) => {
   }
   const msgsendBtnclk = (e) => {
     e.preventDefault()
-    if (letter < 150) {
+    if (letter <= 160) {
       if (msgFld.phnumber.length >= 10) {
         const rawnumber = msgFld.phnumber.split(" ")
         const phnumber = rawnumber.filter((e) => {
