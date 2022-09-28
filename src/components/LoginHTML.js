@@ -1,5 +1,5 @@
 import React from 'react'
-import './FormHTML.css'
+import './LoginPage.css'
 import Logo from '../photos/logo.jpg'
 
 const LoginHTML = (props) => {
