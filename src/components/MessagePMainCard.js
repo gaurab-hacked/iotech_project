@@ -9,6 +9,7 @@ const MessagePMainCard = (props) => {
 
   const inpfldChange = (e) => {
     setMsgFld({ ...msgFld, [e.target.name]: e.target.value });
+
     setLetter(msgFld.message.trim().length);
   }
   const msgsendBtnclk = (e) => {

@@ -14,11 +14,11 @@ const LoginHTML = (props) => {
                 <form>
                     <p>Welcome Please Login</p>
                     <div className="field-group">
-                        <input type="text" name="username" id="username" className="input-field" value={formVal.username} onChange={inpFldChange} placeholder="Enter Name" />
+                        <input type="text" name="username" id="username" className="input-field" value={formVal.username} onChange={inpFldChange} placeholder="Username" />
                         <label htmlFor="name" className="input-label">Username</label>
                     </div>
                     <div className="field-group">
-                        <input type="password" name="password" id="password" className="input-field" value={formVal.password} onChange={inpFldChange} placeholder="Enter Name" />
+                        <input type="password" name="password" id="password" className="input-field" value={formVal.password} onChange={inpFldChange} placeholder="Password" />
                         <label htmlFor="name" className="input-label">Password</label>
                     </div>
                     <a href="#"><i className="fa-solid fa-lock"></i> <span> Forgot password? </span></a>
