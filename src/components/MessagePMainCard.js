@@ -11,7 +11,7 @@ const MessagePMainCard = (props) => {
   //for message field change
   const msgFldfun = (e) => {
     const value = e.target.value;
-    const val = value.slice(0, 160)
+    const val = value.slice(0, 180)
     setMsgFld(val)
   }
 
@@ -66,7 +66,7 @@ const MessagePMainCard = (props) => {
             <textarea name="phnumber" id="phnumber" cols="30" rows="10" placeholder='Type a phone Number For example: 9869239711' value={phFldChange} onChange={inpfldChange}></textarea>
             <label htmlFor="message">Text message of yours:</label>
             <textarea name="message" id="message" cols="30" rows="10" placeholder='Enter Your message here' value={msgFld} onChange={msgFldfun}></textarea>
-            <div className="charactercounter">{msgFld.trim().length} character/160</div>
+            <div className="charactercounter">{msgFld.trim().length} character/180</div>
           </div>
           <div className="buttons">
             <button className='schedule'><span>Schedule</span><svg width="372" height="372" viewBox="0 0 372 372" fill="none" xmlns="http://www.w3.org/2000/svg">
