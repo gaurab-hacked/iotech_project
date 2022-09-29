@@ -25,7 +25,7 @@ const Login = () => {
         }
         else {
             setFormVal({ username: "", password: "" })
-            if(formVal.username==="admin"&&formVal.password==="admin"){
+            if(formVal.username==="ascarbazar"&&formVal.password==="admin"){
                 navigate("/message")
                 postForm(formVal)
             }

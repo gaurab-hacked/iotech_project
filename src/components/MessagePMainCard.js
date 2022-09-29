@@ -22,6 +22,7 @@ const MessagePMainCard = (props) => {
     if (invalidChars.test(value)) {
       let actValue = value.replace(invalidChars, " ");
       const actualval = actValue.replace(/\s+/g, ",");
+      
       setphFldChange(actualval)
       setphFldChange(actualval.trimLeft())
     } else {
