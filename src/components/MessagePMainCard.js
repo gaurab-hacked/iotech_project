@@ -21,7 +21,7 @@ const MessagePMainCard = (props) => {
     let invalidChars = /[^0-9]/gi;
     if (invalidChars.test(value)) {
       let actValue = value.replace(invalidChars, " ");
-      const actualval = actValue.replace(/\s+/g, " ");
+      const actualval = actValue.replace(/\s+/g, ",");
       setphFldChange(actualval)
       setphFldChange(actualval.trimLeft())
     } else {
@@ -33,19 +33,14 @@ const MessagePMainCard = (props) => {
   //when click in btn
   const msgsendBtnclk = (e) => {
     e.preventDefault();
-    const rawnumber = phFldChange.split(" ");
-    const number = rawnumber.filter((e) => e.length > 8);
-    if (number.length >= 1) {
-      if (msgFld.length >= 5) {
-        const data = { phnumber: number, message: msgFld }
-        MessageForm(data);
-        setMsgFld("");
-        setphFldChange("");
-        toast.success(<p id='error'>Message send success</p>, {theme: "colored"});
-      }
+    if (msgFld.length >= 5) {
+      const data = { phone_number: phFldChange, message: msgFld }
+      MessageForm(data);
+      setMsgFld("");
+      setphFldChange("");
     }
-    else{
-      toast.error(<p id='error'>Please Enter Valid Input Field</p>, {theme: "colored"});
+    else {
+      toast.error(<p id='error'>Please Enter Valid Input Field</p>, { theme: "colored" });
     }
   }
 
