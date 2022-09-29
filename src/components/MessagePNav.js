@@ -10,7 +10,11 @@ const MessagePNav = () => {
                 </svg>
 
             </div>
-            <div className="profile"><i className="fa-solid fa-user"></i></div>
+            <div className="username">
+                {localStorage.getItem("username")}
+            </div>
+            <div className="profile">
+                <i className="fa-solid fa-user"></i></div>
         </nav>
     )
 }

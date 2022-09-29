@@ -9,7 +9,8 @@ const LoginHTML = (props) => {
             <div className="form">
                 <div id="logo">
                     <img src={Logo} alt="logo" />
-                    <p>I.O Tech Nepal</p>
+                    <p>I.O Tech Nepal</p><br />
+                    <p>(Bulk SMS)</p>
                 </div>
                 <form>
                     <p>Welcome Please Login</p>
