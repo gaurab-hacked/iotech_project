@@ -1,11 +1,19 @@
+import { useState } from "react";
+// import { useNavigate } from "react-router-dom";
 import FormContext from "./FormContext";
 
 const FormState = (props) => {
+  // const navigate = useNavigate();
+  
 
-
+  
+  const [logindata, setLoginData] = useState({});
+  
   //for form post request
   const postForm = async (data) => {    
-    console.log(data)
+    // console.log(data)
+    setLoginData(data);
+    localStorage.setItem("username", data.username);
 
     // for backend 
 
@@ -27,7 +35,9 @@ const FormState = (props) => {
   }
 
   const MessageForm = async (data) =>{
+    data.username = localStorage.getItem("username")
     console.log(data);
+
 
     //for backend
     
@@ -50,7 +60,7 @@ const FormState = (props) => {
 
 
   return (
-    <FormContext.Provider value={{ postForm, MessageForm }}>
+    <FormContext.Provider value={{ postForm, MessageForm, logindata }}>
       {props.children}
     </FormContext.Provider>
   )

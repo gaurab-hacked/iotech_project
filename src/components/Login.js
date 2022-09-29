@@ -3,8 +3,10 @@ import FormContext from '../context/FormContext'
 import LoginHTML from './LoginHTML';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+    const navigate = useNavigate();
     const { postForm } = useContext(FormContext);
     const [formVal, setFormVal] = useState({ username: "", password: "" })
 
@@ -16,16 +18,22 @@ const Login = () => {
     const submitBtnClk = (e) => {
         e.preventDefault();
         if (formVal.username.length === 0) {
-            toast.error(<p id='error'>Username must be greater than 5 character</p>, {theme: "colored"});
+            toast.error(<p id='error'>Please enter username</p>, {theme: "colored"});
         }
-        else if (formVal.password.length < 6) {
-            toast.error(<p id='error'>Password must be greater than 5 character</p>, {theme: "colored"});
+        else if (formVal.password.length < 3) {
+            toast.error(<p id='error'>Password must be greater than 3 character</p>, {theme: "colored"});
         }
         else {
-            postForm(formVal)
             setFormVal({ username: "", password: "" })
-            toast.success(<p id='error'>Login Success</p>, {theme: "colored"});
+            if(formVal.username==="admin"&&formVal.password==="admin"){
+                navigate("/message")
+                postForm(formVal)
+            }
+            else{
+                toast.error(<p id='error'>Envalid username or password</p>, {theme: "colored"});
+            }
         }
+
     }
 
     return (
